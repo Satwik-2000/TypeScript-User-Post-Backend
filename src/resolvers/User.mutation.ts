@@ -14,16 +14,12 @@ export const login = async (_: any, args: { email: string; password: string }): 
       const isPasswordValid = await bcrypt.compare(password, user.password);
 
       if (isPasswordValid) {
-        await getRepository(User).update({ email }, { LastLoginTime: new Date(), FalseLoginAttempts: 0, LoginDelay: 0 });
+        await getRepository(User).update({ email }, { LastLoginTime: new Date() });
         return generateToken(user.id, email);
       }
-      await getRepository(User).update(
-        { email },
-        { LoginDelay: parseInt(Math.exp(user.FalseLoginAttempts + 1).toFixed(0), 10), FalseLoginAttempts: user.FalseLoginAttempts + 1 }
-      );
       throw new Error("Wrong Credentials");
     }
-    throw new Error("This user is not allowed to login for now");
+    throw new Error("Login Error!");
   } catch (err) {
     console.error(err);
     throw err;

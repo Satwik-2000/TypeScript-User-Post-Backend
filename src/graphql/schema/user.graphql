@@ -27,5 +27,4 @@ type User {
   lastname: String
   createdDate: DateTime
   updateDate: DateTime
-  ismember: Boolean
 }

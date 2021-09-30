@@ -4,9 +4,6 @@ import { getUserDetails } from "../../resolvers/User.query";
 import { getUserRelationCounts, isFollow } from "../../resolvers/UserFollow.query";
 
 const Query = {
-  InitQuery: () => {
-    return "Test Passed";
-  },
   // User
   getUserDetails,
 
@@ -17,8 +14,7 @@ const Query = {
 
   // User Follow
   getUserRelationCounts,
-  isFollow,
-  
+  isFollow,  
 };
 
 export default Query;

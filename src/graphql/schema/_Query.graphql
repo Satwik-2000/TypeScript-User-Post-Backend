@@ -1,8 +1,4 @@
-directive @rateLimit(MAX_TOKENS: Int, TOKEN_WINDOW: Int) on FIELD_DEFINITION
-directive @isClubMember on FIELD_DEFINITION
-
 type Query {
-  InitQuery(id: Int): String! @rateLimit(MAX_TOKENS: 10, TOKEN_WINDOW: 86400)
   getUserDetails(userId: String): User
   getUserPostApi(userId: String!, page: Int!): [Post]
   getUserPosts(userId: String!, grpId: String): [Post]

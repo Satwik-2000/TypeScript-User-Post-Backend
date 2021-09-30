@@ -3,9 +3,6 @@ import { getAccessToken, login, signUp} from "../../resolvers/User.mutation";
 import { FollowUser, RejectFollowRequest, RemoveFollower, Unfollow } from "../../resolvers/UserFollow.mutation";
 
 const Mutation = {
-  InitMutation: () => {
-    return "Test Passed";
-  },
   // User
   signUp,
   login,
