@@ -1,0 +1,15 @@
+input postInput {
+  text: String
+  parentId: String
+}
+
+type Post {
+  postId: String
+  User: User
+  userId: String
+  parentId: String
+  Parent: Post
+  text: String
+  createdDate: DateTime
+  updateDate: DateTime
+}

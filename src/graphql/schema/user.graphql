@@ -1,0 +1,31 @@
+enum UserType {
+  Private
+  Public
+}
+
+type AuthPayload {
+  accessToken: String
+  refreshAccessToken: String
+  userId: String
+}
+
+input SignUpArgs {
+  userType: UserType!
+  email: String!
+  password: String!
+  username: String!
+  firstname: String!
+  lastname: String
+}
+
+type User {
+  id: String
+  UserType: UserType
+  email: String
+  username: String
+  firstname: String
+  lastname: String
+  createdDate: DateTime
+  updateDate: DateTime
+  ismember: Boolean
+}

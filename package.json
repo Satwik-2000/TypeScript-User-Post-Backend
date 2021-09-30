@@ -1,50 +1,60 @@
 {
-  "name": "user-post-type-server",
+  "name": "userio",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "repository": "",
+  "author": "Satwik Ghosh",
+  "license": "MIT",
   "scripts": {
     "watch": "tsc -w",
     "dev": "nodemon dist/index.js",
     "start": "node dist/index.js",
     "start2": "ts-node src/index.ts",
-    "dev2": "nodemon --exec ts-node src/index.ts",
-    "create:migration": "mikro-orm migration:create"
-  },
-  "author": "Satwik Ghosh",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/bcryptjs": "^2.4.2",
-    "@types/cookie-parser": "^1.4.2",
-    "@types/express": "^4.17.13",
-    "@types/jsonwebtoken": "^8.5.5",
-    "@types/node": "^16.9.4",
-    "nodemon": "^2.0.12",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.3"
+    "dev2": "nodemon --exec ts-node src/index.ts"
   },
   "dependencies": {
-    "@mikro-orm/cli": "^4.5.9",
-    "@mikro-orm/core": "^4.5.9",
-    "@mikro-orm/migrations": "^4.5.9",
-    "@mikro-orm/postgresql": "^4.5.9",
-    "apollo-server-express": "^3.3.0",
+    "@types/uuid": "^7.0.2",
+    "apollo-server-express": "^2.10.1",
     "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.5",
-    "dotenv": "^10.0.0",
+    "cors": "^2.8.5",
+    "date-and-time": "^0.14.2",
+    "date-fns": "^2.9.0",
     "express": "^4.17.1",
-    "graphql": "^15.6.0",
+    "graphql": "^15.5.0",
+    "graphql-middleware": "^4.0.2",
+    "graphql-redis-subscriptions": "^2.2.1",
+    "graphql-scalars": "^1.0.6",
+    "graphql-shield": "^7.0.8",
+    "http": "^0.0.1-security",
     "jsonwebtoken": "^8.5.1",
-    "pg": "^8.7.1",
-    "reflect-metadata": "^0.1.13",
+    "link-preview-js": "^2.0.1",
+    "lodash": "^4.17.21",
+    "merge-graphql-schemas": "^1.7.8",
+    "multer": "^1.4.2",
+    "node-cron": "^2.0.3",
+    "pg": "^7.3.0",
+    "reflect-metadata": "^0.1.10",
     "type-graphql": "^1.1.1",
-    "typeorm": "^0.2.37"
+    "typeorm": "0.2.25",
+    "uuidv4": "^6.2.2"
   },
-  "mikro-orm": {
-    "useTsNode": true,
-    "configPaths": [
-      "./src/mikro-orm.config.ts",
-      "./dist/mikro-orm.config.js"
-    ]
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.2",
+    "@types/jsonwebtoken": "^8.3.7",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "3.3.0",
+    "typescript": "3.3.3333"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   }
 }
