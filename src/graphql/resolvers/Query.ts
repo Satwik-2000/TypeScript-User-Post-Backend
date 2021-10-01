@@ -14,7 +14,8 @@ const Query = {
 
   // User Follow
   getUserRelationCounts,
-  isFollow,  
+  isFollow,
+  
 };
 
 export default Query;

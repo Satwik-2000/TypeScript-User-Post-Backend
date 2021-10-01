@@ -1,7 +1,7 @@
 type Query {
   getUserDetails(userId: String): User
   getUserPostApi(userId: String!, page: Int!): [Post]
-  getUserPosts(userId: String!, grpId: String): [Post]
+  getUserPosts(userId: String!): [Post]
   getUserRelationCounts(userId: String!): UserFollowRelationsCount!
   isFollow(userId: String!): Boolean
   getFeedPosts(page: Int!): [Post]

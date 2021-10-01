@@ -19,8 +19,8 @@ const typeDefs = mergeTypes(schemaArray);
 const schema = applyMiddleware(
   makeExecutableSchema({
     typeDefs,
-    resolvers,
-    schemaDirectives: {}
+    resolvers
+    // schemaDirectives: {}
   })
 );
 

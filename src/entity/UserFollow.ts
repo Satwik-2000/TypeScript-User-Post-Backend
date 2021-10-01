@@ -8,18 +8,18 @@ class UserFollow {
   @PrimaryGeneratedColumn("uuid")
   userfollowId: string;
 
-  @ManyToOne(
+  @ManyToOne (
     () => User,
     user => user.id
   )
   @JoinColumn([{ name: "followerId" }])
   follower: User;
 
-  @ManyToOne(
+  @ManyToOne (
     () => User,
     user => user.id
   )
-  @JoinColumn([{ name: "followingId" }])
+  @JoinColumn ([{ name: "followingId" }])
   following: User;
 
   @Column()
