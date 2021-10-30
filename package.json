@@ -19,7 +19,7 @@
     "cors": "^2.8.5",
     "date-and-time": "^0.14.2",
     "date-fns": "^2.9.0",
-    "easygraphql-tester": "^6.0.1",
+    "easygraphql-load-tester": "^2.0.5",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
     "graphql-middleware": "^4.0.2",

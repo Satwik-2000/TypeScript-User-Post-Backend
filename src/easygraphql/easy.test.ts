@@ -1,8 +1,13 @@
-const EasyGraphqlTester = require('easygraphql-tester');
+const EasyGraphqlLoadTester = require('easygraphql-load-tester');
 const fs = require('fs');
 const path = require('path');
 
-const schemaCode = fs.readFileSync(
-    path.join(__dirname, "src/graphql/schema", "/_Query.graphql"),
-    "utf8"
+const userSchema = fs.readFileSync(
+    path.join(__dirname, "src/graphql/schema", "/user.graphql"), "utf8"
 )
+
+const postSchema = fs.readFileSync(
+    path.join(__dirname, "src/graphql/schema", "/post.graphql"), "utf8"
+)
+
+const tester = new EasyGraphqlLoadTester([userSchema, postSchema]);
