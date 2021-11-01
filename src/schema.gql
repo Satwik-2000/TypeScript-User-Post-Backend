@@ -1,0 +1,8 @@
+type testMethod {
+    valueOne: String!
+    valueTwo: String!
+}
+
+type Query {
+    testInfo(user: String!): testMethod
+}

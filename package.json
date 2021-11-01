@@ -13,6 +13,7 @@
     "dev2": "nodemon --exec ts-node src/index.ts"
   },
   "dependencies": {
+    "@types/jest": "^27.0.2",
     "@types/uuid": "^7.0.2",
     "apollo-server-express": "^2.10.1",
     "bcryptjs": "^2.4.3",
@@ -20,6 +21,7 @@
     "date-and-time": "^0.14.2",
     "date-fns": "^2.9.0",
     "easygraphql-load-tester": "^2.0.5",
+    "easygraphql-tester": "^6.0.1",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
     "graphql-middleware": "^4.0.2",
